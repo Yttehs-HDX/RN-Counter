@@ -8,12 +8,12 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
   useColorScheme, View,
 } from 'react-native';
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import {MainNavigator} from './navigation/MainNavigator.tsx';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,15 +24,7 @@ function App(): React.JSX.Element {
   };
 
   return (
-      <View style={backgroundStyle}>
-        <View style={styles.primaryContainer}>
-          <View style={styles.secondaryContainer}>
-            <Text>
-              Hello World
-            </Text>
-          </View>
-        </View>
-      </View>
+      <MainNavigator/>
   );
 }
 
