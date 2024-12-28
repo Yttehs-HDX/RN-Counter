@@ -5,18 +5,17 @@
 import {Animated, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import View = Animated.View;
 import React from 'react';
+import numViewModel from '../viewmodel/NumberViewModel.ts';
+import {observer} from 'mobx-react-lite';
 
-export const HomeScreen = () => {
-    const [num, setNum] = React.useState(0);
-    const increaseNum = () => {
-        setNum(num + 1);
-    };
+export const HomeScreen = observer(() => {
+    const num = numViewModel.getNum();
     return (
         <View style={styles.primaryContainer}>
-            <NumberButton num={num} onPress={increaseNum}/>
+            <NumberButton num={num} onPress={numViewModel.increaseNum}/>
         </View>
     );
-};
+});
 
 type NumberButtonProps = {
     num: number,
