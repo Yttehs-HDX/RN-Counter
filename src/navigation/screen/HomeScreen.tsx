@@ -12,9 +12,9 @@ export const HomeScreen = () => {
         setNum(num + 1);
     };
     return (
-      <View style={styles.primaryContainer}>
-          <NumberButton num={num} onPress={increaseNum}></NumberButton>
-      </View>
+        <View style={styles.primaryContainer}>
+            <NumberButton num={num} onPress={increaseNum}/>
+        </View>
     );
 };
 
@@ -28,7 +28,9 @@ const NumberButton = (props: NumberButtonProps) => {
         <TouchableOpacity
             style={styles.secondaryContainer}
             onPress={props.onPress}>
-            <Text>{props.num}</Text>
+            <Text style={styles.buttonText}>
+                {props.num}
+            </Text>
         </TouchableOpacity>
     );
 };
@@ -44,5 +46,9 @@ const styles = StyleSheet.create({
         padding: 30,
         borderRadius: 90,
         overflow: 'hidden',
+    },
+    buttonText: {
+        fontSize: 30,
+        fontWeight: 'bold',
     },
 });
