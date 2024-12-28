@@ -7,8 +7,7 @@
 
 import React from 'react';
 import {
-  StyleSheet,
-  useColorScheme, View,
+  useColorScheme,
 } from 'react-native';
 import {
   Colors,
@@ -27,19 +26,5 @@ function App(): React.JSX.Element {
       <MainNavigator/>
   );
 }
-
-const styles = StyleSheet.create({
-  primaryContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  secondaryContainer: {
-    backgroundColor: 'lightblue',
-    padding: 30,
-    borderRadius: 90,
-    overflow: 'hidden',
-  },
-});
 
 export default App;
