@@ -5,8 +5,8 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {DestinationsConfig} from './destinations.ts';
-import {HomeScreen} from './screen/HomeScreen.tsx';
-import {AboutScreen} from './screen/AboutScreen.tsx';
+import {HomeScreen} from '../screen/HomeScreen.tsx';
+import {AboutScreen} from '../screen/AboutScreen.tsx';
 
 const Tab = createBottomTabNavigator();
 
