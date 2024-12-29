@@ -1,11 +1,18 @@
+/**
+ * Card Component
+ */
+
 import {Animated, StyleSheet} from 'react-native';
 import View = Animated.View;
 import React from 'react';
+import Row from './Row.tsx';
 
 const Card = ({children}: {children: React.ReactNode}) => {
     return (
         <View style={styles.cardContainer}>
-            {children}
+            <Row>
+                {children}
+            </Row>
         </View>
     );
 };
