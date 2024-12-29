@@ -12,7 +12,7 @@ export const HomeScreen = observer(() => {
     const num = numViewModel.getNum();
     return (
         <View style={styles.primaryContainer}>
-            <NumberButton num={num} onPress={numViewModel.increaseNum}/>
+            <NumberButton num={num.getNum()} onPress={numViewModel.increaseNum}/>
         </View>
     );
 });
