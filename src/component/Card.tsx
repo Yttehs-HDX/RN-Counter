@@ -20,6 +20,7 @@ const Card = ({children}: {children: React.ReactNode}) => {
 const styles = StyleSheet.create({
     cardContainer: {
         backgroundColor: '#FFFFFF',
+        alignItems: 'flex-start',
         // iOS
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
